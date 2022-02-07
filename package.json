@@ -1,6 +1,6 @@
 {
   "name": "react-onclickoutside-solsten",
-  "version": "6.12.3",
+  "version": "6.12.4",
   "description": "An onClickOutside wrapper for React components",
   "main": "dist/react-onclickoutside-solsten.cjs.js",
   "module": "dist/react-onclickoutside-solsten.es.js",
@@ -13,7 +13,6 @@
     "Pomax <pomax@nihongoresources.com>",
     "Andarist <mateuszburzynski@gmail.com>"
   ],
-
   "keywords": [
     "react",
     "onclick",
