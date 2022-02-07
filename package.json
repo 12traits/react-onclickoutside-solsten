@@ -1,14 +1,14 @@
 {
   "name": "react-onclickoutside-solsten",
-  "version": "6.12.2",
+  "version": "6.12.3",
   "description": "An onClickOutside wrapper for React components",
-  "main": "dist/react-onclickoutside.cjs.js",
-  "module": "dist/react-onclickoutside.es.js",
-  "jsnext:main": "dist/react-onclickoutside.es.js",
+  "main": "dist/react-onclickoutside-solsten.cjs.js",
+  "module": "dist/react-onclickoutside-solsten.es.js",
+  "jsnext:main": "dist/react-onclickoutside-solsten.es.js",
   "files": [
     "dist"
   ],
-  "unpkg": "dist/react-onclickoutside.min.js",
+  "unpkg": "dist/react-onclickoutside-solsten.min.js",
   "authors": [
     "Pomax <pomax@nihongoresources.com>",
     "Andarist <mateuszburzynski@gmail.com>"
@@ -30,7 +30,20 @@
     "url": "https://github.com/12traits/react-onclickoutside-solsten/issues"
   },
   "scripts": {
-
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "rollup -c rollup.config.js --compact",
+    "lint": "eslint src/*.js ./test",
+    "test": "run-s test:**",
+    "test:basic": "run-s lint build",
+    "test:karma": "karma start test/karma.conf.js --single-run",
+    "test:nodom": "mocha test/no-dom-test.js",
+    "precommit": "npm test && lint-staged",
+    "prepare": "npm run build",
+    "prerelease": "npm run test",
+    "release:patch": "npm run prerelease && npm version patch && npm publish",
+    "release:minor": "npm run prerelease && npm version minor && npm publish",
+    "release:major": "npm run prerelease && npm version major && npm publish"
   },
   "devDependencies": {
     "@babel/core": "^7.14.2",
