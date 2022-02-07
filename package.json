@@ -8,6 +8,7 @@
   "files": [
     "dist"
   ],
+  "unpkg": "dist/react-onclickoutside.min.js",
   "authors": [
     "Pomax <pomax@nihongoresources.com>",
     "Andarist <mateuszburzynski@gmail.com>"
@@ -17,15 +18,16 @@
     "react",
     "onclick",
     "outside",
-    "onclickoutside"
+    "onclickoutside",
+    "onclickoutside-solsten"
   ],
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Pomax/react-onclickoutside.git"
+    "url": "https://github.com/12traits/react-onclickoutside-solsten"
   },
   "bugs": {
-    "url": "https://github.com/Pomax/react-onclickoutside/issues"
+    "url": "https://github.com/12traits/react-onclickoutside-solsten/issues"
   },
   "scripts": {
 
